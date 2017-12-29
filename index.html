@@ -6,8 +6,39 @@
     <meta name="author" content="name">
     <meta name="description" content="Coco and Jake are getting married! Stay tuned...">
     <meta name="keywords" content="coco,courtney,jake,madowitz,kring,wedding,married,marriage,ceremony,party">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Josefin+Slab" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+      }
+      h1,h2,h3,h4,h5,p {
+        font-family: 'Josefin Slab', serif;
+      }
+      .banner-container {
+        display: flex;
+        flex: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url(venice.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .item {
+        color: white;
+        flex: auto;
+        padding: 30px;
+      }
+      p {
+        font-size: 22px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Coco and Jake are getting married!</h1> 
+    <div class='banner-container'>
+      <h1 class='item'>Coco and Jake are Getting Married!</h1> 
+      <p class='item'>Stay tuned...</p>
+    </div>
   </body>
 </html>
