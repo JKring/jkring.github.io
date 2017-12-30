@@ -26,8 +26,12 @@
         background-size: cover;
       }
       .item {
+        display: flex;
         color: white;
         flex: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding: 30px;
       }
       p {
@@ -37,8 +41,10 @@
   </head>
   <body>
     <div class='banner-container'>
-      <h1 class='item'>Coco and Jake are Getting Married!</h1> 
-      <p class='item'>Stay tuned...</p>
+      <div class='item'>
+        <h1>Coco and Jake are Getting Married!</h1> 
+        <p>Stay tuned...</p>
+      </div>
     </div>
   </body>
 </html>
