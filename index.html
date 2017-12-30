@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coco and Jake's Wedding</title>
     <meta name="author" content="name">
     <meta name="description" content="Coco and Jake are getting married! Stay tuned...">
@@ -32,8 +33,27 @@
         align-items: center;
         padding: 30px;
       }
+      h1 {
+        font-size: 64px;
+      }
       p {
-        font-size: 22px;
+        font-size: 32px;
+      }
+      @media (min-width : 768px) and (max-width : 1024px) {
+        h1 {
+          font-size: 48px;
+        }
+        p {
+          font-size: 24px;
+        }
+      }
+      @media (max-width : 768px) {
+        h1 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 16px;
+        }
       }
     </style>
   </head>
