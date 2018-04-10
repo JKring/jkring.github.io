@@ -5,64 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coco and Jake's Wedding</title>
     <meta name="author" content="name">
-    <meta name="description" content="Coco and Jake are getting married! Stay tuned...">
+    <meta name="description" content="Courtney and Jake are getting married! Stay tuned...">
     <meta name="keywords" content="coco,courtney,jake,madowitz,kring,wedding,married,marriage,ceremony,party">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
     <style>
       body {
         margin: 0;
       }
-      h1,h2,h3,h4,h5,p {
+      h1,h2,h3,h4,h5 {
         font-family: 'Josefin Slab', serif;
       }
-      .banner-container {
-        display: flex;
-        flex: auto;
-        flex-direction: column;
-        height: 100vh;
-        background-image: url(venice.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      .banner {
-        display: flex;
-        color: white;
-        flex: auto;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 30px;
-      }
-      h1 {
-        font-size: 64px;
+      @font-face {
+        font-family: Brandon;
+        src: url(brandon-light.otf);
       }
       p {
+        max-width: 640px;
+        margin: 20px auto;
+        text-align: left;
+        font-family: 'Brandon', sans-serif;
+        font-size: 24px;
+        padding: 0 20px;
+      }
+      a {
+        font-family: 'Josefin Slab', serif;
+        color: #475D85;
+      }
+      a:hover {
+        color: #2F4264;
+      }
+      .container {
+        text-align: center;
+        padding-top: 10px;
+      }
+      #crest {
+        width: 750px;
+      }
+      h1 {
+        font-size: 60px;
+        margin-bottom: 0px;
+      }
+      h2 {
         font-size: 32px;
+      }
+      .nav {
+        text-align: center;
+      }
+      .nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .nav li {
+        display: inline-block; 
+      }
+      .nav li a {
+        display: block;
+        text-align: center;
+        padding: 30px 20px;
+        text-decoration: none;
+      }
+      .text-pink {
+        color: #de56a2;
+      }
+      #wedding img {
+        border: 5px solid #475D85;
+      }
+      #wedding .header {
+        font-weight: bold;
+        margin-bottom: 0px;
+      }
+      @media (max-width: 850px) {
+        #crest {
+          width: 90%;
+        }
       }
       @media (min-width : 768px) and (max-width : 1024px) {
         h1 {
-          font-size: 48px;
+          font-size: 46px;
         }
-        p {
+        h2 {
           font-size: 24px;
         }
       }
       @media (max-width : 768px) {
         h1 {
-          font-size: 20px;
+          font-size: 22px;
         }
-        p {
+        h2 {
           font-size: 16px;
+        }
+        .nav ul {
+          display: none;
         }
       }
     </style>
   </head>
   <body>
-    <div class='banner-container'>
-      <div class='banner'>
-        <h1>Coco and Jake are Getting Married!</h1> 
-        <p>Stay tuned...</p>
-      </div>
+    <div class="nav">
+      <ul>
+        <li><a section-id='story' href='#'>Our Story</a></li>
+        <li><a section-id='wedding' href='#'>Our Wedding</a></li>
+        <li><a section-id='accomodations' href='#'>Accomodations</a></li>
+        <li><a section-id='bro-diego' href='#'>San Diego</a></li>
+        <li><a section-id='rsvp' href='#'>RSVP</a></li>
+        <li><a section-id='registry' href='#'>Registry</a></li>
+      </ul>
+    </div>
+    <div class='container'>
+      <img id="crest" src="images/crest.png" />
+      <h1>Courtney and Jake are Getting Married</h1>
+      <h2>in San Diego, California.</h2>
+    </div>
+    <div id='story' class='container'>
+      <h3>Our Story</h3>
+      <p>Courtney and Jake met in the thriving metropolis of Northfield, Minnesota. Jake first saw Courtney sitting on a couch in Carleton’s Gould Library, a place where she spent much of her time and he spent almost none. He immediately asked their mutual friend, Ari, “who is that girl?”, his insatiable curiosity getting the best of him.</p>
+      <p>What followed was a drawn out courting process, which Courtney describes as a period of “circling each other like wolves”. In reality, she was the wolf and he was more like a man lost in the woods. On numerous occasions she tried to set him straight, with varying degrees of bite and bark.</p>
+      <p>It wasn’t until they met up in San Francisco, in a neighborhood neither cares to remember, that their relationship truly began. For the first 8 months their love blossomed at a distance, with her in Minneapolis and him in Oakland. He tried to convince her to move in, after their first date, but in her deeply analytical way she concluded that would be a rash decision. So they visited often, and she was only somewhat dissuaded by the fact that he had no bed sheets, and was insistent on using sleeping bags. Every visit was a wild adventure. They raised chickens, and kayaked in Lake Merritt, and even met Jake’s friends in Philadelphia. But in time their love grew too strong to be kept at a distance, so Jake quit his job and moved to Minnesota. The rest is history!</p>
+    </div>
+    <div id='wedding' class='container'>
+      <h3>Our Wedding</h3>
+      <img width="640" src="https://maps.googleapis.com/maps/api/staticmap?autoscale=2&size=640x320&maptype=roadmap&key=AIzaSyBUh8gb7SO2rUn902SAyHuYySftVZ7eRRM&format=png&visual_refresh=true&markers=icon:http://www.cocoandjake.com/images/ceremony.png%7Cshadow:true%7CThe+US+Grant,+Broadway,+San+Diego&markers=size:mid%7Ccolor:0xde56a2%7Clabel:C%7C7791+Draper+Ave,+La+Jolla,+CA+92037&markers=size:mid%7Ccolor:0xde56a2%7Clabel:R%7C1549+El+Prado,+San+Diego,+CA+92101" alt="Google Map of San Diego, CA">
+      <p class='header'><b class="text-pink">H</b>otel</p>
+      <p>The US Grant, 326 Broadway, San Diego, CA 92101</p>
+      <p><b class="text-pink">C</b>eremony</p>
+      <p>La Jolla Woman's Club, 7791 Draper Ave, La Jolla, CA 92037</p>
+      <p><b class="text-pink">R</b>eception</p>
+      <p>The Prado, 1549 El Prado, San Diego, CA 92101</p>
+    </div>
+    <div id='accomodations' class='container'>
+      <h3>Accomodations</h3>
+    </div>
+    <div id='bro-diego' class='container'>
+      <h3>San Diego</h3>
+    </div>
+    <div id='rsvp' class='container'>
+      <h3>RSVP</h3>
+    </div>
+    <div id='registry' class='container'>
+      <h3>Registry</h3>
     </div>
   </body>
+  <script>
+    var links = document.querySelectorAll('.nav ul li a');
+    var i;
+    for (i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function(event) {
+        var section = document.getElementById(event.target.getAttribute('section-id'));
+        window.scroll({ top: section.getBoundingClientRect().top, behavior: 'smooth' });
+      });
+    }
+  </script>
 </html>
