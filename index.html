@@ -126,6 +126,45 @@
         font-weight: bold;
         margin-bottom: 0px;
       }
+      #image-carousel-container {
+        overflow: hidden;
+        overflow-x: scroll;
+        margin-left: -50px;
+      }
+      .image-carousel {
+        list-style-type: none;
+        width: 6500px;
+      }
+      .image-container {
+        float: left;
+        height: 460px;
+      }
+      .image-container img {
+        height: 385px;
+      }
+      .caption-container {
+        background: black;
+        color: white;
+        margin-top: -6px;
+        padding: 12px 0;
+      }
+      .caption {
+        font-family: 'Josefin Slab', serif;
+        margin: 0px;
+      }
+      .caption-loc {
+        font-family: 'Brandon', sans-serif;
+        margin: 0px;
+        font-size: 14px;
+      }
+      #next-button {
+        position: relative;
+        left: 95%;
+        top: 175px;
+      }
+      #next-button-container {
+        height: 0px;
+      }
       @media (max-width: 850px) {
         #crest {
           width: 90%;
@@ -153,6 +192,9 @@
         .nav li a {
           padding: 20px 20px 10px 20px;
         }
+        #next-button {
+          left: 80%;
+        }
       }
     </style>
   </head>
@@ -163,7 +205,6 @@
         <li><a class='scroll-link' section-id='wedding' href='#wedding'>Our Wedding</a></li>
         <li><a class='scroll-link' section-id='accomodations' href='#accomodations'>Accomodations</a></li>
         <li><a class='scroll-link' section-id='bro-diego' href='#bro-diego'>San Diego</a></li>
-<!--         <li><a class='scroll-link' section-id='rsvp' href='#'>RSVP</a></li> -->
         <li><a href='https://www.zola.com/registry/cocoandjake' target='_blank'>Registry</a></li>
       </ul>
     </div>
@@ -171,6 +212,134 @@
       <img id="crest" src="images/crest.png" />
       <h1>Courtney and Jake are Getting Married</h1>
       <h2>in San Diego, California.</h2>
+    </div>
+    <div id="next-button-container">
+      <a href="#" id="next-button">
+        <img src="images/next-image.png" />
+      </a>
+    </div>
+    <div id="image-carousel-container">
+      <ul class="image-carousel">
+        <li class="image-container">
+          <image src="images/hvar.jpg" />
+          <div class="caption-container">
+            <p class="caption">Near Death Boat Ride</p>
+            <p class="caption-loc">Hvar, Croatia</p>
+          </div>
+        </li>
+        <li class="image-container">
+          <image src="images/karaoke.jpg" />
+          <div class="caption-container">
+            <p class="caption">Mariah at Jaguar</p>
+            <p class="caption-loc">Oakland, CA</p>
+          </div>
+        </li>
+        <li class="image-container">
+          <image src="images/llamas.jpg" />
+          <div class="caption-container">
+            <p class="caption">Indoor Llamas</p>
+            <p class="caption-loc">Mendocino, CA</p>
+          </div>
+        </li>
+        <li class="image-container">
+          <image src="images/cherry-blossom-japan.jpg" />
+          <div class="caption-container">
+            <p class="caption">Cherry Blossoms</p>
+            <p class="caption-loc">Tokyo</p>
+          </div>
+        </li>
+        <li class="image-container">
+          <image src="images/pompeii.jpg" />
+          <div class="caption-container">
+            <p class="caption">Hangin' with Rick Steves</p>
+            <p class="caption-loc">Pompeii</p>
+          </div>
+        </li>
+        <li class="image-container">
+          <image src="images/minnesota-kate.jpg" />
+          <div class="caption-container">
+            <p class="caption">Barnyard Wedding</p>
+            <p class="caption-loc">Those Young Twin Cities, MN</p>
+          </div>
+        </li>
+        <li class="image-container">
+          <image src="images/san-sebastian.jpg" />
+          <div class="caption-container">
+            <p class="caption">Pintxos</p>
+            <p class="caption-loc">San Sebastian, Spain</p>
+          </div>
+        </li>
+        <li class="image-container">
+          <image src="images/jamaica.jpg" />
+          <div class="caption-container">
+            <p class="caption">Rockhouse</p>
+            <p class="caption-loc">Negril, Jamaica</p>
+          </div>
+        </li>
+        <li class="image-container">
+          <image src="images/st-julien-lars.jpg" />
+          <div class="caption-container">
+            <p class="caption">The Chateau</p>
+            <p class="caption-loc">Saint-Julien-l'Ars, France</p>
+          </div>
+        </li>
+        <li class="image-container">
+          <image src="images/natural-habitat.jpg" />
+          <div class="caption-container">
+            <p class="caption">Natural Habitat</p>
+            <p class="caption-loc">Oakland</p>
+          </div>
+        </li>
+        <li class="image-container">
+          <image src="images/road-to-benihana.jpg" />
+          <div class="caption-container">
+            <p class="caption">Road to Beninhana</p>
+            <p class="caption-loc">Road to Hana, Maui</p>
+          </div>
+        </li>
+        <li class="image-container">
+          <image src="images/scene-of-the-crime.jpg" />
+          <div class="caption-container">
+            <p class="caption">We're Engaged!</p>
+            <p class="caption-loc">Kapalua Coast</p>
+          </div>
+        </li>
+        <li class="image-container">
+          <image src="images/sintra-portugal.jpg" />
+          <div class="caption-container">
+            <p class="caption">Palace of Pena</p>
+            <p class="caption-loc">Sintra, Portugal</p>
+          </div>
+        </li>
+        <li class="image-container">
+          <image src="images/sf-city-hall.jpg" />
+          <div class="caption-container">
+            <p class="caption">Call Me Maybe</p>
+            <p class="caption-loc">SF City Hall</p>
+          </div>
+        </li>
+        <li class="image-container">
+          <image src="images/venice-guggenheim.jpg" />
+          <div class="caption-container">
+            <p class="caption">The Guggenheim</p>
+            <p class="caption-loc">Venice</p>
+          </div>
+        </li>
+        <li class="image-container">
+          <image src="images/la-petite-chaise.jpg" />
+          <div class="caption-container">
+            <p class="caption">La Petite Chaise</p>
+            <p class="caption-loc">Paris</p>
+          </div>
+        </li>
+        <li class="image-container">
+          <image src="images/jurassic-letdown.jpg" />
+          <div class="caption-container">
+            <p class="caption">Jurassic Letdown</p>
+            <p class="caption-loc">Maui</p>
+          </div>
+        </li>
+      </ul>
     </div>
     <div id='story' class='container'>
       <h3>Our Story</h3>
@@ -242,5 +411,38 @@
         event.preventDefault();
       });
     }
+  </script>
+  <script>
+    var SCROLL_PER_TAP = 1000;
+    var SCROLL_FRAMERATE = 10;
+    var SCROLL_MILLIS = 5;
+    var MAX_SCROLL_FRAMERATE = SCROLL_FRAMERATE * 2;
+    var NUM_FRAMES = SCROLL_PER_TAP / SCROLL_FRAMERATE;
+    var nextButton = document.getElementById('next-button');
+    var carousel = document.getElementById('image-carousel-container');
+    nextButton.addEventListener('click', function(event) {
+      var index = 0;
+      var left = carousel.scrollLeft;
+      var nextLeft = left + SCROLL_PER_TAP;
+      var scrolling = setInterval(frame, SCROLL_MILLIS);
+      function frame() {
+        var inverseSpeed = Math.abs(1 - ((index / NUM_FRAMES) * 2));
+        if (left >= nextLeft) {
+          clearInterval(scrolling);
+        } else {
+          left += MAX_SCROLL_FRAMERATE - (MAX_SCROLL_FRAMERATE * inverseSpeed);
+          carousel.scrollLeft = left;
+        }
+        index ++;
+      }
+      event.preventDefault();
+    })
+    carousel.addEventListener('scroll', function(e) {
+      if (carousel.scrollLeft > 5000) {
+        nextButton.style.display = 'none';
+      } else {
+        nextButton.style.display = 'inherit';
+      }
+    })
   </script>
 </html>
