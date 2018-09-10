@@ -6,7 +6,7 @@
     <title>Coco and Jake's Wedding</title>
     <meta name="author" content="name">
     <meta name="description" content="Courtney (Coco) Madowitz and Jake Kring are getting married! Their wedding is in San Diego on October 27th, 2018.">
-    <meta name="keywords" content="coco,courtney,jake,madowitz,kring,wedding,married,marriage,ceremony,party">
+    <meta name="keywords" content="coco,courtney,madowitz,jake,jacob,kring,wedding,married,marriage,ceremony,party">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
@@ -167,6 +167,153 @@
       #next-button-container {
         height: 0px;
       }
+      .rsvp-card {
+        display: none;
+      }
+      .rsvp-para {
+        text-align: center;
+        padding: 30px 0 20px;
+      }
+      .rsvp-button {
+        background-color: #475D85;
+        border-radius: 5px;
+        color: white;
+        font-family: 'Brandon Bold', sans-serif;
+        padding: 20px 40px;
+        text-decoration: none;
+      }
+      .rsvp-button:hover {
+        background-color: #2F4264;
+        color: white;
+      }
+      #rsvp-container {
+        max-width: 600px;
+        margin: 5px auto;
+      }
+      #rsvp-header {
+        background-image: url('images/rsvp-background.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        min-height: 240px;
+        color: white;
+        text-align: right;
+        padding: 25px;
+        
+      }
+      #rsvp-header h2 {
+        font-size: 80px;
+        margin: 20px 0 0;
+      }
+      #rsvp-header p {
+        text-align: right; 
+        margin: 0px;
+        padding: 0px;
+      }
+      .back-button {
+        margin: 0px;
+      }
+      .back-button a {
+        text-decoration: none;
+        font-size: 16px;
+      }
+      .input-label {
+        font-size: 18px;
+        font-family: 'Brandon Bold', sans-serif;
+      }
+      .text-input {
+        border: 5px solid #efefef;
+        font-size: 28px;
+        font-family: 'Brandon', sans-serif;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 4px;
+      }
+      .text-input:focus {
+        border: 5px solid #475D85;
+      }
+      #search-form {
+        padding-right: 20px;
+      }
+      #search-form p {
+        margin: 0px;
+      }
+      #search-error {
+        text-align: center;
+      }
+      #search-error p {
+        font-size: 18px;
+        margin-top: 0px;
+        text-align: center;
+      }
+      #search-error h3 {
+        margin: 0px;
+        font-size: 26px;
+      }
+      .submit-button-container {
+        text-align: center;
+      }
+      .submit-button {
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 22px;
+        background-color: #475D85;
+        border-radius: 5px;
+        color: white;
+        font-family: 'Brandon Bold', sans-serif;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+      .radio-option {
+        cursor: pointer;
+        font-size: 26px;
+        background-color: white;
+        border-radius: 35px;
+        border: 5px solid #efefef;
+        color: #efefef;
+        font-family: 'Brandon Bold', sans-serif;
+        padding: 10px 0;
+        width: 150px;
+        text-align: center;
+        display: inline-block;
+        text-decoration: none;
+      }
+      .radio-option:hover {
+        border: 5px solid #475D85;
+      }
+      .radio-option.selected {
+        color: white;
+        border: 5px solid #475D85;
+        background: #475D85;    
+      }
+      .radio-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .submit-link-container {
+        text-align: center;
+        padding-top: 40px;
+      }
+      .submit-link {
+        cursor: pointer;
+        font-size: 22px;
+        background-color: #475D85;
+        border-radius: 5px;
+        color: white;
+        font-family: 'Brandon Bold', sans-serif;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+      .submit-link:hover {
+        background: #2F4264;
+        color: white;
+      }
+      #thanks-card h3 {
+        text-align: center;
+      }
+      #thanks-card p {
+        text-align: center;
+      }
       @media (max-width: 850px) {
         #crest {
           width: 90%;
@@ -187,6 +334,12 @@
         h2 {
           font-size: 16px;
         }
+        #rsvp-header h2 {
+          font-size: 40px;
+        }
+        #rsvp-header p {
+          font-size: 16px;
+        }
         .map {
           border: none;
           width: 100%;
@@ -194,219 +347,278 @@
         .nav li a {
           padding: 20px 20px 10px 20px;
         }
+        #rsvp-header {
+          min-height: 130px;
+        }
         #next-button {
           left: 80%;
+        }
+        .text-input {
+          margin-bottom: 5px;
         }
       }
     </style>
   </head>
   <body>
-    <div class="nav">
-      <ul>
-        <li><a class='scroll-link' section-id='story' href='#story'>Our Story</a></li>
-        <li><a class='scroll-link' section-id='wedding' href='#wedding'>Our Wedding</a></li>
-        <li><a class='scroll-link' section-id='accomodations' href='#accomodations'>Accomodations</a></li>
-        <li><a class='scroll-link' section-id='bro-diego' href='#bro-diego'>San Diego</a></li>
-        <li><a href='https://www.zola.com/registry/cocoandjake' target='_blank'>Registry</a></li>
-      </ul>
-    </div>
-    <div class='banner'>
-      <img id="crest" src="images/crest.png" />
-      <h1>Courtney and Jake are Getting Married</h1>
-      <h2>in San Diego, California.</h2>
-    </div>
-    <div id="next-button-container">
-      <a href="#" id="next-button">
-        <img src="images/next-image.png" />
-      </a>
-    </div>
-    <div id="image-carousel-container">
-      <ul class="image-carousel">
-        <li class="image-container">
-          <image src="images/near-death.jpg" />
-          <div class="caption-container">
-            <p class="caption">Near Death Boat Ride</p>
-            <p class="caption-loc">Hvar, Croatia</p>
+    <div id="regular-mode">
+      <div class="nav">
+        <ul>
+          <li><a class='scroll-link' section-id='story' href='#story'>Our Story</a></li>
+          <li><a class='scroll-link' section-id='wedding' href='#wedding'>Our Wedding</a></li>
+          <li><a class='scroll-link' section-id='accomodations' href='#accomodations'>Accomodations</a></li>
+          <li><a class='scroll-link' section-id='bro-diego' href='#bro-diego'>San Diego</a></li>
+          <li><a href='https://www.zola.com/registry/cocoandjake' target='_blank'>Registry</a></li>
+        </ul>
+      </div>
+      <div class='banner'>
+        <img id="crest" src="images/crest.png" />
+        <h1>Courtney and Jake are Getting Married</h1>
+        <h2>in San Diego, California.</h2>
+        <p class="rsvp-para">
+          <a href="#rsvp" class="rsvp-button">RSVP Now!</a>
+        </p>
+      </div>
+      <div id="next-button-container">
+        <a href="#" id="next-button">
+          <img src="images/next-image.png" />
+        </a>
+      </div>
+      <div id="image-carousel-container">
+        <ul class="image-carousel">
+          <li class="image-container">
+            <image src="images/near-death.jpg" />
+            <div class="caption-container">
+              <p class="caption">Near Death Boat Ride</p>
+              <p class="caption-loc">Hvar, Croatia</p>
+            </div>
+          </li>
+          <li class="image-container">
+            <image src="images/karaoke.jpg" />
+            <div class="caption-container">
+              <p class="caption">Mariah at Jaguar</p>
+              <p class="caption-loc">Oakland, CA</p>
+            </div>
+          </li>
+          <li class="image-container">
+            <image src="images/llamas.jpg" />
+            <div class="caption-container">
+              <p class="caption">Indoor Llamas</p>
+              <p class="caption-loc">Mendocino, CA</p>
+            </div>
+          </li>
+          <li class="image-container">
+            <image src="images/cherry-blossoms-japan.jpg" />
+            <div class="caption-container">
+              <p class="caption">Cherry Blossoms</p>
+              <p class="caption-loc">Tokyo</p>
+            </div>
+          </li>
+          <li class="image-container">
+            <image src="images/pompeii.jpg" />
+            <div class="caption-container">
+              <p class="caption">Hangin' with Rick Steves</p>
+              <p class="caption-loc">Pompeii</p>
+            </div>
+          </li>
+          <li class="image-container">
+            <image src="images/minnesota-kate.jpg" />
+            <div class="caption-container">
+              <p class="caption">Barnyard Wedding</p>
+              <p class="caption-loc">Those Young Twin Cities, MN</p>
+            </div>
+          </li>
+          <li class="image-container">
+            <image src="images/san-sebastian.jpg" />
+            <div class="caption-container">
+              <p class="caption">Pintxos</p>
+              <p class="caption-loc">San Sebastian, Spain</p>
+            </div>
+          </li>
+          <li class="image-container">
+            <image src="images/jamaica.jpg" />
+            <div class="caption-container">
+              <p class="caption">Rockhouse</p>
+              <p class="caption-loc">Negril, Jamaica</p>
+            </div>
+          </li>
+          <li class="image-container">
+            <image src="images/st-julien-lars.jpg" />
+            <div class="caption-container">
+              <p class="caption">The Chateau</p>
+              <p class="caption-loc">Saint-Julien-l'Ars, France</p>
+            </div>
+          </li>
+          <li class="image-container">
+            <image src="images/natural-habitat.jpg" />
+            <div class="caption-container">
+              <p class="caption">Natural Habitat</p>
+              <p class="caption-loc">Oakland</p>
+            </div>
+          </li>
+          <li class="image-container">
+            <image src="images/road-to-benihana.jpg" />
+            <div class="caption-container">
+              <p class="caption">Road to Beninhana</p>
+              <p class="caption-loc">Road to Hana, Maui</p>
+            </div>
+          </li>
+          <li class="image-container">
+            <image src="images/scene-of-the-crime.jpg" />
+            <div class="caption-container">
+              <p class="caption">We're Engaged!</p>
+              <p class="caption-loc">Kapalua Coast</p>
+            </div>
+          </li>
+          <li class="image-container">
+            <image src="images/sintra-portugal.jpg" />
+            <div class="caption-container">
+              <p class="caption">Palace of Pena</p>
+              <p class="caption-loc">Sintra, Portugal</p>
+            </div>
+          </li>
+          <li class="image-container">
+            <image src="images/sf-city-hall.jpg" />
+            <div class="caption-container">
+              <p class="caption">Call Me Maybe</p>
+              <p class="caption-loc">SF City Hall</p>
+            </div>
+          </li>
+          <li class="image-container">
+            <image src="images/venice-guggenheim.jpg" />
+            <div class="caption-container">
+              <p class="caption">The Guggenheim</p>
+              <p class="caption-loc">Venice</p>
+            </div>
+          </li>
+          <li class="image-container">
+            <image src="images/la-petite-chaise.jpg" />
+            <div class="caption-container">
+              <p class="caption">La Petite Chaise</p>
+              <p class="caption-loc">Paris</p>
+            </div>
+          </li>
+          <li class="image-container">
+            <image src="images/jurassic-letdown.jpg" />
+            <div class="caption-container">
+              <p class="caption">Jurassic Letdown</p>
+              <p class="caption-loc">Maui</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id='story' class='container'>
+        <h3>Our Story</h3>
+        <p>Courtney and Jake met in the thriving metropolis of Northfield, Minnesota. Jake first saw Courtney sitting on a couch in Carleton’s Gould Library, a place where she spent much of her time and he spent almost none. He immediately asked their mutual friend, Ari, <b>“who is that girl?”</b>, his insatiable curiosity getting the best of him.</p>
+        <p>What followed was a drawn out courting process, which Courtney describes as a period of <b>“circling each other like wolves”</b>. In reality, she was the wolf and he was more like <b>a man lost in the woods</b>. On numerous occasions she tried to set him straight, with varying degrees of <b>bite and bark</b>.</p>
+        <p>It wasn’t until they met up in San Francisco, in a neighborhood neither cares to remember, that their relationship truly began. For the first 8 months their love blossomed at a distance, with her in Minneapolis and him in Oakland. He tried to convince her to move in, after their first date, but in her <b>deeply analytical</b> way she concluded that would be a rash decision. So they visited often, and she was only somewhat dissuaded by the fact that he had no bed sheets, and was insistent on using <b>sleeping bags</b>. Every visit was a wild adventure. They raised <b>chickens</b>, and kayaked in <b>Lake Merritt</b>, and even met Jake’s friends in Philadelphia. But in time their love grew too strong to be kept at a distance, so Jake quit his job and moved to Minnesota (and then nine months later they moved back to California, because it’s <b>better</b>).</p>
+      </div>
+      <div id='wedding' class='container'>
+        <h3>Our Wedding</h3>
+        <img width="600" class="map" src="https://maps.googleapis.com/maps/api/staticmap?autoscale=2&size=600x600&maptype=roadmap&key=AIzaSyBUh8gb7SO2rUn902SAyHuYySftVZ7eRRM&format=png&visual_refresh=true&markers=icon:https://s3.amazonaws.com/coco-and-jake/hotel.png%7Cshadow:true%7C326+Broadway,+San+Diego,+CA+92101&markers=icon:https://s3.amazonaws.com/coco-and-jake/reception.png%7Cshadow:true%7C1549+El+Prado,+San+Diego,+CA+92101&markers=icon:https://s3.amazonaws.com/coco-and-jake/ceremony.png%7Cshadow:true%7C7791+Draper+Ave,+La+Jolla,+CA+920371" alt="Our Wedding Venue">
+      </div>
+      <div id='accomodations' class='container'>
+        <div class='flex row'>
+          <div class='image-box'>
+            <img width="64" height="64" src="https://s3.amazonaws.com/coco-and-jake/hotel.png" />
           </div>
-        </li>
-        <li class="image-container">
-          <image src="images/karaoke.jpg" />
-          <div class="caption-container">
-            <p class="caption">Mariah at Jaguar</p>
-            <p class="caption-loc">Oakland, CA</p>
-          </div>
-        </li>
-        <li class="image-container">
-          <image src="images/llamas.jpg" />
-          <div class="caption-container">
-            <p class="caption">Indoor Llamas</p>
-            <p class="caption-loc">Mendocino, CA</p>
-          </div>
-        </li>
-        <li class="image-container">
-          <image src="images/cherry-blossoms-japan.jpg" />
-          <div class="caption-container">
-            <p class="caption">Cherry Blossoms</p>
-            <p class="caption-loc">Tokyo</p>
-          </div>
-        </li>
-        <li class="image-container">
-          <image src="images/pompeii.jpg" />
-          <div class="caption-container">
-            <p class="caption">Hangin' with Rick Steves</p>
-            <p class="caption-loc">Pompeii</p>
-          </div>
-        </li>
-        <li class="image-container">
-          <image src="images/minnesota-kate.jpg" />
-          <div class="caption-container">
-            <p class="caption">Barnyard Wedding</p>
-            <p class="caption-loc">Those Young Twin Cities, MN</p>
-          </div>
-        </li>
-        <li class="image-container">
-          <image src="images/san-sebastian.jpg" />
-          <div class="caption-container">
-            <p class="caption">Pintxos</p>
-            <p class="caption-loc">San Sebastian, Spain</p>
-          </div>
-        </li>
-        <li class="image-container">
-          <image src="images/jamaica.jpg" />
-          <div class="caption-container">
-            <p class="caption">Rockhouse</p>
-            <p class="caption-loc">Negril, Jamaica</p>
-          </div>
-        </li>
-        <li class="image-container">
-          <image src="images/st-julien-lars.jpg" />
-          <div class="caption-container">
-            <p class="caption">The Chateau</p>
-            <p class="caption-loc">Saint-Julien-l'Ars, France</p>
-          </div>
-        </li>
-        <li class="image-container">
-          <image src="images/natural-habitat.jpg" />
-          <div class="caption-container">
-            <p class="caption">Natural Habitat</p>
-            <p class="caption-loc">Oakland</p>
-          </div>
-        </li>
-        <li class="image-container">
-          <image src="images/road-to-benihana.jpg" />
-          <div class="caption-container">
-            <p class="caption">Road to Beninhana</p>
-            <p class="caption-loc">Road to Hana, Maui</p>
-          </div>
-        </li>
-        <li class="image-container">
-          <image src="images/scene-of-the-crime.jpg" />
-          <div class="caption-container">
-            <p class="caption">We're Engaged!</p>
-            <p class="caption-loc">Kapalua Coast</p>
-          </div>
-        </li>
-        <li class="image-container">
-          <image src="images/sintra-portugal.jpg" />
-          <div class="caption-container">
-            <p class="caption">Palace of Pena</p>
-            <p class="caption-loc">Sintra, Portugal</p>
-          </div>
-        </li>
-        <li class="image-container">
-          <image src="images/sf-city-hall.jpg" />
-          <div class="caption-container">
-            <p class="caption">Call Me Maybe</p>
-            <p class="caption-loc">SF City Hall</p>
-          </div>
-        </li>
-        <li class="image-container">
-          <image src="images/venice-guggenheim.jpg" />
-          <div class="caption-container">
-            <p class="caption">The Guggenheim</p>
-            <p class="caption-loc">Venice</p>
-          </div>
-        </li>
-        <li class="image-container">
-          <image src="images/la-petite-chaise.jpg" />
-          <div class="caption-container">
-            <p class="caption">La Petite Chaise</p>
-            <p class="caption-loc">Paris</p>
-          </div>
-        </li>
-        <li class="image-container">
-          <image src="images/jurassic-letdown.jpg" />
-          <div class="caption-container">
-            <p class="caption">Jurassic Letdown</p>
-            <p class="caption-loc">Maui</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div id='story' class='container'>
-      <h3>Our Story</h3>
-      <p>Courtney and Jake met in the thriving metropolis of Northfield, Minnesota. Jake first saw Courtney sitting on a couch in Carleton’s Gould Library, a place where she spent much of her time and he spent almost none. He immediately asked their mutual friend, Ari, <b>“who is that girl?”</b>, his insatiable curiosity getting the best of him.</p>
-      <p>What followed was a drawn out courting process, which Courtney describes as a period of <b>“circling each other like wolves”</b>. In reality, she was the wolf and he was more like <b>a man lost in the woods</b>. On numerous occasions she tried to set him straight, with varying degrees of <b>bite and bark</b>.</p>
-      <p>It wasn’t until they met up in San Francisco, in a neighborhood neither cares to remember, that their relationship truly began. For the first 8 months their love blossomed at a distance, with her in Minneapolis and him in Oakland. He tried to convince her to move in, after their first date, but in her <b>deeply analytical</b> way she concluded that would be a rash decision. So they visited often, and she was only somewhat dissuaded by the fact that he had no bed sheets, and was insistent on using <b>sleeping bags</b>. Every visit was a wild adventure. They raised <b>chickens</b>, and kayaked in <b>Lake Merritt</b>, and even met Jake’s friends in Philadelphia. But in time their love grew too strong to be kept at a distance, so Jake quit his job and moved to Minnesota (and then nine months later they moved back to California, because it’s <b>better</b>).</p>
-    </div>
-    <div id='wedding' class='container'>
-      <h3>Our Wedding</h3>
-      <img width="600" class="map" src="https://maps.googleapis.com/maps/api/staticmap?autoscale=2&size=600x600&maptype=roadmap&key=AIzaSyBUh8gb7SO2rUn902SAyHuYySftVZ7eRRM&format=png&visual_refresh=true&markers=icon:https://s3.amazonaws.com/coco-and-jake/hotel.png%7Cshadow:true%7C326+Broadway,+San+Diego,+CA+92101&markers=icon:https://s3.amazonaws.com/coco-and-jake/reception.png%7Cshadow:true%7C1549+El+Prado,+San+Diego,+CA+92101&markers=icon:https://s3.amazonaws.com/coco-and-jake/ceremony.png%7Cshadow:true%7C7791+Draper+Ave,+La+Jolla,+CA+920371" alt="Our Wedding Venue">
-    </div>
-    <div id='accomodations' class='container'>
-      <div class='flex row'>
-        <div class='image-box'>
-          <img width="64" height="64" src="https://s3.amazonaws.com/coco-and-jake/hotel.png" />
+          <p><span class='text-pink'>The Hotel</span> is the US Grant, 326 Broadway, San Diego, CA 92101. <a href='https://www.starwoodmeeting.com/events/start.action?id=1806208426&key=322C3ED8' target='_blank'>Book a room</a>.</p>
         </div>
-        <p><span class='text-pink'>The Hotel</span> is the US Grant, 326 Broadway, San Diego, CA 92101. <a href='https://www.starwoodmeeting.com/events/start.action?id=1806208426&key=322C3ED8' target='_blank'>Book a room</a>.</p>
-      </div>
-      <div class='flex row'>
-        <div class='image-box'>
-          <img width="64" height="64" src="https://s3.amazonaws.com/coco-and-jake/bus.png" /> 
+        <div class='flex row'>
+          <div class='image-box'>
+            <img width="64" height="64" src="https://s3.amazonaws.com/coco-and-jake/bus.png" /> 
+          </div>
+          <p class='text-gray text-small'>transportation provided from the hotel to the ceremony</p>
         </div>
-        <p class='text-gray text-small'>transportation provided from the hotel to the ceremony</p>
-      </div>
-      <div class='flex row'>
-        <div class='image-box'>
-          <img width="64" height="64" src="https://s3.amazonaws.com/coco-and-jake/ceremony.png" /> 
+        <div class='flex row'>
+          <div class='image-box'>
+            <img width="64" height="64" src="https://s3.amazonaws.com/coco-and-jake/ceremony.png" /> 
+          </div>
+          <p><span class='text-pink'>The Ceremony</span> is at the La Jolla Woman's Club, 7791 Draper Ave, La Jolla, CA 92037</p>
         </div>
-        <p><span class='text-pink'>The Ceremony</span> is at the La Jolla Woman's Club, 7791 Draper Ave, La Jolla, CA 92037</p>
-      </div>
-      <div class='flex row'>
-        <div class='image-box'>
-          <img width="64" height="64" src="https://s3.amazonaws.com/coco-and-jake/bus.png" />
-        </div> 
-        <p class='text-gray text-small'>transportation provided from the ceremony to the reception</p>
-      </div>
-      <div class='flex row'>
-        <div class='image-box'>
-          <img width="64" height="64" src="https://s3.amazonaws.com/coco-and-jake/reception.png" />
+        <div class='flex row'>
+          <div class='image-box'>
+            <img width="64" height="64" src="https://s3.amazonaws.com/coco-and-jake/bus.png" />
+          </div> 
+          <p class='text-gray text-small'>transportation provided from the ceremony to the reception</p>
         </div>
-        <p><span class='text-pink'>The Reception</span> is at the Prado, 1549 El Prado, San Diego, CA 92101</p>
+        <div class='flex row'>
+          <div class='image-box'>
+            <img width="64" height="64" src="https://s3.amazonaws.com/coco-and-jake/reception.png" />
+          </div>
+          <p><span class='text-pink'>The Reception</span> is at the Prado, 1549 El Prado, San Diego, CA 92101</p>
+        </div>
+        <p class="rsvp-para">
+          <a href="#rsvp" class="rsvp-button">RSVP Now!</a>
+        </p>
+      </div>
+      <div id='bro-diego' class='container'>
+        <h3>San Diego</h3>
+        <p>San Diego is one of our favorite places (and Courtney’s hometown!). We think the New York Times sums up best:</p>
+        <p class="quote">
+          San Diego has its own particular brand of <b>laid-back cool</b>. The coastal city is made up of distinct neighborhoods, each adorned with its own retro-style, street-spanning sign. This is a city that <b>knows how to have a good time</b>. With more than its fair share of <b>sunshine</b>, gorgeous beaches and a newly buzzing restaurant scene, San Diego is a vacation spot for those looking for <b>low-stress</b> California fun.
+        </p>
+        <p>A few things to do in <b>America’s Finest City</b>:</p>
+        <p>Check out the sea lions over at <a target='_blank' href="https://www.sandiego.com/beaches/la-jolla-cove">La Jolla Cove</a> or take a dip in the ocean for some swimming, diving, snorkeling, and cave exploring.</p>
+        <p>If golf is your thing, book a tee time at <a href='http://www.torreypinesgolfcourse.com/' target='_blank'>Torrey Pines</a> public golf course.</p>
+        <p>Rent some surfboards or bike the boardwalk over at <a href='https://www.sandiego.org/explore/things-to-do/beaches-bays/mission-beach.aspx' target='_blank'>Mission Beach</a>.</p>
+        <p>San Diego is known for its world class craft beer—there are dozens of amazing breweries to explore but we recommend you make time for a tasting at <a href='http://www.stonebrewing.com/visit/bistros/liberty-station' target='_blank'>Stone Brewing</a> or visit <a href='http://thebrewproject.com/' target='_blank'>The Brew Project</a> in Hillcrest to try them all!</p>
+        <p>The <a href='https://aquarium.ucsd.edu/' target='_blank'>Birch Aquarium</a> at Scripps is the largest oceanographic museum in the United States and is well worth a visit. We’re aquarium people!</p>
+        <p>Stop by the historic <a href='https://hoteldel.com/about/' target='_blank'>Hotel del Coronado</a>, a favorite getaway of Frank Sinatra, Walt Disney, and Greta Garbo. Take a walk along the beach or wander around the hotel to see where the movie <i>Some Like it Hot</i> was filmed.</p>
+        <p>Pay the pandas a visit at the <a href='http://zoo.sandiegozoo.org/' target='_blank'>San Diego Zoo</a>, just a 5-minute drive from downtown.</p>
+        <p>Founded in 1769, <a href='http://www.oldtownsandiego.org/' target='_blank'>Old Town San Diego State Historic Park</a> is California’s first Spanish settlement. Today you can tour the remaining historic sites, museums, grab some great Mexican food, and even visit a tequila bar all inside the park!</p>
+        <p>Looking for more? Check out the <a href='https://www.nytimes.com/interactive/2017/02/16/travel/what-to-do-36-hours-in-san-diego-california.html' target='_blank'>NYTimes 36 Hours</a>!</p>
+        <p class="rsvp-para">
+          <a href="#rsvp" class="rsvp-button">RSVP Now!</a>
+        </p>
       </div>
     </div>
-    <div id='bro-diego' class='container'>
-      <h3>San Diego</h3>
-      <p>San Diego is one of our favorite places (and Courtney’s hometown!). We think the New York Times sums up best:</p>
-      <p class="quote">
-        San Diego has its own particular brand of <b>laid-back cool</b>. The coastal city is made up of distinct neighborhoods, each adorned with its own retro-style, street-spanning sign. This is a city that <b>knows how to have a good time</b>. With more than its fair share of <b>sunshine</b>, gorgeous beaches and a newly buzzing restaurant scene, San Diego is a vacation spot for those looking for <b>low-stress</b> California fun.
-      </p>
-      <p>A few things to do in <b>America’s Finest City</b>:</p>
-      <p>Check out the sea lions over at <a target='_blank' href="https://www.sandiego.com/beaches/la-jolla-cove">La Jolla Cove</a> or take a dip in the ocean for some swimming, diving, snorkeling, and cave exploring.</p>
-      <p>If golf is your thing, book a tee time at <a href='http://www.torreypinesgolfcourse.com/' target='_blank'>Torrey Pines</a> public golf course.</p>
-      <p>Rent some surfboards or bike the boardwalk over at <a href='https://www.sandiego.org/explore/things-to-do/beaches-bays/mission-beach.aspx' target='_blank'>Mission Beach</a>.</p>
-      <p>San Diego is known for its world class craft beer—there are dozens of amazing breweries to explore but we recommend you make time for a tasting at <a href='http://www.stonebrewing.com/visit/bistros/liberty-station' target='_blank'>Stone Brewing</a> or visit <a href='http://thebrewproject.com/' target='_blank'>The Brew Project</a> in Hillcrest to try them all!</p>
-      <p>The <a href='https://aquarium.ucsd.edu/' target='_blank'>Birch Aquarium</a> at Scripps is the largest oceanographic museum in the United States and is well worth a visit. We’re aquarium people!</p>
-      <p>Stop by the historic <a href='https://hoteldel.com/about/' target='_blank'>Hotel del Coronado</a>, a favorite getaway of Frank Sinatra, Walt Disney, and Greta Garbo. Take a walk along the beach or wander around the hotel to see where the movie <i>Some Like it Hot</i> was filmed.</p>
-      <p>Pay the pandas a visit at the <a href='http://zoo.sandiegozoo.org/' target='_blank'>San Diego Zoo</a>, just a 5-minute drive from downtown.</p>
-      <p>Founded in 1769, <a href='http://www.oldtownsandiego.org/' target='_blank'>Old Town San Diego State Historic Park</a> is California’s first Spanish settlement. Today you can tour the remaining historic sites, museums, grab some great Mexican food, and even visit a tequila bar all inside the park!</p>
-      <p>Looking for more? Check out the <a href='https://www.nytimes.com/interactive/2017/02/16/travel/what-to-do-36-hours-in-san-diego-california.html' target='_blank'>NYTimes 36 Hours</a>!</p>
+    <div id="rsvp-mode" style="display: none">
+      <div id="rsvp-container">
+        <p class="back-button"><a href='#' id='back-button'>< Back</a></p>
+        <div id="rsvp-header">
+          <h2>RSVP</h2>
+          <p>to Courtney and<br /> Jake's Wedding</p>
+        </div>
+        <div id="search-card" class="rsvp-card">
+          <div id="search-error" style="display: none">
+            <h3>Oops!</h3>
+            <p>Something went wrong. Please send kringj@gmail.com an email!</p>
+          </div>
+          <form id="search-form">
+            <p><label class="input-label" for="First Name">Your First Name</label></p>
+            <p><input id="first-name" type="text" name="first_name" class="text-input" /></p>
+            <p><label class="input-label" for="Last Name">Your Last Name</label></p>
+            <p><input id="last-name" type="text" name="last_name" class="text-input" /></p>
+
+<!--        <p><label class="input-label" for="Email">Your Email</label></p>
+            <p><input type="text" name="email" class="text-input" /></p>
+ -->
+            <p class="submit-button-container"><input type="submit" value="Next Step" class="submit-button" /></p>
+          </form>
+        </div>
+        <div id="friend-card" class="rsvp-card"></div>
+        <div id="food-card" class="rsvp-card"></div>
+        <div id="jrdn-card" class="rsvp-card"></div>
+        <div id="thanks-card" class="rsvp-card">
+          <h3>Thanks!</h3>
+          <p>We can't wait to celebrate with you!</p>
+        </div>
+      </div>
     </div>
   </body>
   <script>
+    // Trim polyfill
+    if (typeof(String.prototype.trim) === "undefined") {
+      String.prototype.trim = function() { return String(this).replace(/^\s+|\s+$/g, ''); };
+    }
+  </script>
+  <script>
+    var currentUser = null;
+  </script>
+  <script>
+    // Nav links that scroll to elements
     var links = document.querySelectorAll('.scroll-link');
-    var i;
-    for (i = 0; i < links.length; i++) {
+    for (var i = 0; i < links.length; i++) {
       links[i].addEventListener('click', function(event) {
         var section = document.getElementById(event.target.getAttribute('section-id'));
         window.scroll({ top: section.getBoundingClientRect().top, behavior: 'smooth' });
@@ -415,25 +627,26 @@
     }
   </script>
   <script>
-    var SCROLL_PER_TAP = 1000;
+    // Animated scrolling image carousel
+    var PIXELS_PER_SCROLL = 1000;
     var SCROLL_FRAMERATE = 10;
     var SCROLL_MILLIS = 5;
     var MAX_SCROLL_FRAMERATE = SCROLL_FRAMERATE * 2;
-    var NUM_FRAMES = SCROLL_PER_TAP / SCROLL_FRAMERATE;
+    var NUM_FRAMES = PIXELS_PER_SCROLL / SCROLL_FRAMERATE;
     var nextButton = document.getElementById('next-button');
     var carousel = document.getElementById('image-carousel-container');
     nextButton.addEventListener('click', function(event) {
       var index = 0;
-      var left = carousel.scrollLeft;
-      var nextLeft = left + SCROLL_PER_TAP;
+      var position = carousel.scrollLeft;
+      var finalPosition = position + PIXELS_PER_SCROLL;
       var scrolling = setInterval(frame, SCROLL_MILLIS);
       function frame() {
-        var inverseSpeed = Math.abs(1 - ((index / NUM_FRAMES) * 2));
-        if (left >= nextLeft) {
+        if (position >= finalPosition) {
           clearInterval(scrolling);
         } else {
-          left += MAX_SCROLL_FRAMERATE - (MAX_SCROLL_FRAMERATE * inverseSpeed);
-          carousel.scrollLeft = left;
+          var inverseSpeed = Math.abs(1 - ((index / NUM_FRAMES) * 2));
+          position += MAX_SCROLL_FRAMERATE - (MAX_SCROLL_FRAMERATE * inverseSpeed);
+          carousel.scrollLeft = position;
         }
         index ++;
       }
@@ -443,8 +656,234 @@
       if (carousel.scrollLeft > 5000) {
         nextButton.style.display = 'none';
       } else {
-        nextButton.style.display = 'inherit';
+        nextButton.style.display = 'block';
       }
     })
+  </script>
+  <script>
+    // Draw an RSVP Radio Option
+    var drawOption = function(cardName, id, key, label, options) {
+      var card = document.getElementById(cardName);
+      var labelPara = document.createElement('p');
+      labelPara.innerHTML = label;
+      card.appendChild(labelPara);
+      var buttons = document.createElement('p');
+      for (var q = 0; q < options.length; q ++) {
+        var btn = document.createElement('a');
+        btn.className = 'radio-option';
+        btn.setAttribute('formal-val', options[q].toLowerCase().replace(/ /, /-/g));
+        btn.innerHTML = options[q];
+        btn.addEventListener('click', function(event) {
+          var data = {};
+          data[key] = event.target.innerHTML;
+          db.collection('friends').doc(id).set(data, { merge: true });
+          allFriends[id][key] = event.target.innerHTML;
+          var siblings = event.target.parentNode.children;
+          for (var x = 0; x < siblings.length; x++) {
+            siblings[x].className = 'radio-option';
+          }
+          event.target.className = 'radio-option selected';
+          event.preventDefault();
+        });
+        buttons.appendChild(btn);
+      }
+      buttons.className = 'radio-row';
+      card.appendChild(buttons);
+    }
+  </script>
+  <script>
+    // RSVP Second Step
+    var drawFriend = function(friend) {
+      drawOption(
+        'friend-card',
+        friend.id,
+        'wedding',
+        'Is <b>' + friend.first_name + '</b> coming to our wedding?',
+        ['Yes', 'No']
+      )
+    }
+  </script>
+  <script>
+    var drawFood = function(friend) {
+      drawOption(
+        'food-card',
+        friend.id,
+        'food',
+        'What is <b>' + friend.first_name + '</b> eating?',
+        ['Short Ribs', 'Sea Bass', 'Risotto (v)']
+      )
+    }
+  </script>
+  <script>
+    var drawJrdn = function(friend) {
+      drawOption(
+        'jrdn-card',
+        friend.id,
+        'jrdn',
+        'Is <b>' + friend.first_name + '</b> coming to <b>JRDN</b>?',
+        ['Yes', 'No']
+      )
+    }
+  </script>
+  <script>
+    var drawNextStepButton = function(card, label, nextCardKey) {
+      var para = document.createElement('p');
+      para.className = 'submit-link-container';
+      var btn = document.createElement('a');
+      btn.className = 'submit-link';
+      btn.innerHTML = label;
+      btn.addEventListener('click', function(event) { showCard(nextCardKey); });
+      para.appendChild(btn);
+      card.appendChild(para);
+    }
+  </script>
+  <script>
+    // Pick a Step
+    var RSVP_CARDS = ['search', 'friend', 'food', 'jrdn', 'thanks'];
+    var RSVP_SETUP = {
+      search: function() {},
+      thanks: function() {},
+      friend: function() {
+        var friendCard = document.getElementById('friend-card');
+        friendCard.innerHTML = '';
+        drawFriend(currentUser);
+        for (var n = 0; n < currentUser.party_mates.length; n++) {
+          drawFriend(allFriends[currentUser.party_mates[n]]);
+        }
+        drawNextStepButton(friendCard, 'Next Step', 'food');
+      },
+      food: function() {
+        var foodCard = document.getElementById('food-card');
+        foodCard.innerHTML = '';
+        var atLeastOne = false;
+        if (allFriends[currentUser.id].wedding == 'Yes') {
+          drawFood(currentUser);
+          atLeastOne = true;
+        }
+        for (var n = 0; n < currentUser.party_mates.length; n++) {
+          var mate = allFriends[currentUser.party_mates[n]]
+          if (allFriends[mate.id].wedding == 'Yes') {
+            drawFood(mate);
+            atLeastOne = true;
+          }
+        }
+        if (atLeastOne) {
+          drawNextStepButton(foodCard, 'Next Step', 'jrdn');
+        } else {
+          foodCard.innerHTML = '<p>You will be missed!</p>'
+        }
+      },
+      jrdn: function() {
+        var jrdnCard = document.getElementById('jrdn-card');
+        jrdnCard.innerHTML = "<p>At <b>8pm</b> on <b>Friday Evening</b> we're hosting a <b>Welcome Reception</b> in <b>Pacific Beach</b> at <b>JRDN</b>, serving <b>Drinks</b> and <b>Small Bites</b>.</p>";
+        if (allFriends[currentUser.id].wedding == 'Yes') drawJrdn(currentUser);
+        for (var n = 0; n < currentUser.party_mates.length; n++) {
+          var mate = allFriends[currentUser.party_mates[n]];
+          if (allFriends[mate.id].wedding == 'Yes') drawJrdn(mate);
+        }
+        drawNextStepButton(jrdnCard, 'Finished!', 'thanks');
+      }
+    }
+    var showCard = function(card) {
+      for (var d = 0; d < RSVP_CARDS.length; d++) {
+        document.getElementById(RSVP_CARDS[d] + '-card').style.display = 'none';
+      }
+      RSVP_SETUP[card]()
+      document.getElementById(card + '-card').style.display = 'block';
+    }
+  </script>
+  <script>
+    // Toggle between Regular and RSVP mode
+    var regularMode = document.getElementById('regular-mode');
+    var rsvpMode = document.getElementById('rsvp-mode');
+    var backButton = document.getElementById('back-button');
+    backButton.addEventListener('click', function(event) {
+      rsvpMode.style.display = 'none';
+      regularMode.style.display = 'block';
+    })
+    var rsvpLinks = document.querySelectorAll('.rsvp-button');
+    for (var j = 0; j < rsvpLinks.length; j++) {
+      rsvpLinks[j].addEventListener('click', function(event) {
+        regularMode.style.display = 'none';
+        rsvpMode.style.display = 'block';
+        showCard('search');
+        event.preventDefault();
+      });
+    }
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+  <script>
+    // Initiate DB
+    var config = {
+      apiKey: "AIzaSyA6GEYdQ9CavYP1Z0ihcMNS-cOJwhSWyP4",
+      authDomain: "courntney-and-jake.firebaseapp.com",
+      databaseURL: "https://courntney-and-jake.firebaseio.com",
+      projectId: "courntney-and-jake",
+      storageBucket: "courntney-and-jake.appspot.com",
+      messagingSenderId: "993911066739"
+    };
+    firebase.initializeApp(config);
+    var db = firebase.firestore();
+    db.settings({
+      timestampsInSnapshots: true
+    });
+  </script>
+  <script>
+    // Load All Friends
+    var allFriends = {};
+    var allFirstNames = {};
+    var allLastNames = {}
+    db.collection('friends').get().then(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+        allFriends[doc.id] = doc.data();
+        var firstNames = allFriends[doc.id].first_name_synonyms.concat(
+          [allFriends[doc.id].first_name.toLowerCase()]
+        );
+        for (var k = 0; k < firstNames.length; k++) {
+          allFirstNames[firstNames[k]] = allFirstNames[firstNames[k]] || [];
+          allFirstNames[firstNames[k]].push(doc.id);
+        }
+        var lastNames = allFriends[doc.id].last_name_synonyms.concat(
+          [allFriends[doc.id].last_name.toLowerCase()]
+        );
+        for (var l = 0; l < lastNames.length; l++) {
+          allLastNames[lastNames[l]] = allLastNames[lastNames[l]] || [];
+          allLastNames[lastNames[l]].push(doc.id);
+        }
+      });
+    });
+  </script>
+  <script>
+    // Search for Friend
+    var searchError = document.getElementById('search-error');
+    var showSearchError = function() { searchError.style.display = 'block'; }
+    var searchForm = document.getElementById('search-form');
+    var firstNameInput = document.getElementById('first-name');
+    var lastNameInput = document.getElementById('last-name');
+    searchForm.addEventListener('submit', function(event) {
+      searchError.style.display = 'none';
+      var firstName = firstNameInput.value.trim().toLowerCase();
+      var lastName = lastNameInput.value.trim().toLowerCase();
+      var foundId = null;
+      if (allFirstNames[firstName] && allLastNames[lastName]) {
+        var m = 0;
+        while (!foundId && m < allFirstNames[firstName].length) {
+          var foundAtIndex = allLastNames[lastName].indexOf(allFirstNames[firstName][m])
+          if (foundAtIndex != -1) foundId = allLastNames[lastName][foundAtIndex];
+          m += 1;
+        }
+      }
+      if (foundId) {
+        currentUser = allFriends[foundId];
+        showCard('friend');
+      } else {
+        showSearchError();
+      }
+      event.preventDefault();
+    })    
+  </script>
+  <script>
+    // Update Friend
   </script>
 </html>
