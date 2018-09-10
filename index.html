@@ -782,7 +782,7 @@
       },
       jrdn: function() {
         var jrdnCard = document.getElementById('jrdn-card');
-        jrdnCard.innerHTML = "<p>At <b>8pm</b> on <b>Friday Evening</b> we're hosting a <b>Welcome Reception</b> in <b>Pacific Beach</b> at <b>JRDN</b>, serving <b>Drinks</b> and <b>Small Bites</b>.</p>";
+        jrdnCard.innerHTML = "<p>At <b>8:30pm</b> on <b>Friday Evening</b> we're hosting a <b>Welcome Reception</b> in <b>Pacific Beach</b> at <b>JRDN</b>, with a <b>Cash Bar</b> and <b>Small Bites</b>.</p>";
         if (allFriends[currentUser.id].wedding == 'Yes') drawJrdn(currentUser);
         for (var n = 0; n < currentUser.party_mates.length; n++) {
           var mate = allFriends[currentUser.party_mates[n]];
