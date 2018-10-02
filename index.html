@@ -74,6 +74,11 @@
         align-items: center;
         padding: 0 10px;
       }
+      @media (max-width: 850px) {
+        .column-mobile {
+          flex-direction: column !important;
+        }
+      }
       .image-box {
         width: 64px;
         height: 64px;
@@ -127,6 +132,9 @@
       }
       .mt-0 {
         margin-top: 0px;
+      }
+      .mt-1 {
+        margin-top: 20px;
       }
       #wedding .header {
         font-weight: bold;
@@ -577,8 +585,8 @@
           </div>
           <p><span class='text-pink'>The Reception</span> starts at <b>5pm</b> at the Prado, 1549 El Prado, San Diego, CA 92101</p>
         </div>
-        <div class='flex row'>
-          <h3>Formal Attire</h3>
+        <div class='flex row column-mobile mt-1'>
+          <h3 class='mb-0 mt-0'>Formal Attire</h3>
           <p>No tuxes! We’ll be wearing <b>dark suits</b> and <b>formal dresses</b>. Save your Halloween costume for the after party! 👻</p>
         </div>
         <p class="rsvp-para">
