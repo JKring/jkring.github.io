@@ -66,6 +66,17 @@
         padding-top: 10px;
         margin: auto;        
       }
+      .overlaid-image-container {
+        position: relative;
+      }
+      .on-top-of-image {
+        position: absolute;
+        top: 50%;
+        width: 45%;
+        left: 25%;
+        color: white;
+        margin: auto;
+      }
       .flex {
         display: flex;
       }
@@ -77,6 +88,11 @@
       @media (max-width: 850px) {
         .column-mobile {
           flex-direction: column !important;
+        }
+        .on-top-of-image {
+          width: 80%;
+          left: 10%;
+          top: 15%;
         }
       }
       .image-box {
@@ -587,11 +603,17 @@
         </div>
         <div class='flex row column-mobile mt-1'>
           <h3 class='mb-0 mt-0'>Formal Attire</h3>
-          <p>No tuxes! We’ll be wearing <b>dark suits</b> and <b>formal dresses</b>. Save your Halloween costume for the after party! 👻</p>
+          <p>No tuxes! We’ll be wearing <b>dark suits</b> and <b>formal dresses</b>. Save your Halloween costume for the after party! 👻 Speaking of <b>after parties...</b></p>
         </div>
-        <p class="rsvp-para">
-          <a href="#rsvp" class="rsvp-button">RSVP</a>
-        </p>
+      </div>
+      <div class="full-width overlaid-image-container">
+        <image src="images/hive.png" class="full-width" />
+        <div class='flex row on-top-of-image column-mobile'>
+          <div class='image-box'>
+            <img width="64" height="64" src="images/microphone.png" /> 
+          </div>
+          <p><span class='text-pink'>Private Karaoke</span> rooms reserved. Find your way to 4428 Convoy Street, Suite 100, <b>after the wedding</b>.</p>
+        </div>
       </div>
       <div id='bro-diego' class='container'>
         <h3>San Diego</h3>
@@ -631,10 +653,6 @@
             <p><input id="first-name" type="text" name="first_name" class="text-input" /></p>
             <p><label class="input-label" for="Last Name">Your Last Name</label></p>
             <p><input id="last-name" type="text" name="last_name" class="text-input" /></p>
-
-<!--        <p><label class="input-label" for="Email">Your Email</label></p>
-            <p><input type="text" name="email" class="text-input" /></p>
- -->
             <p class="submit-button-container"><input type="submit" value="Next Step" class="submit-button" /></p>
           </form>
         </div>
